@@ -24,7 +24,7 @@ if(url_param) {
     url = url_param;
     if(limit_param) { limit = limit_param; }
 }
-d3.json("http://api.us.socrata.com/api/catalog/v1?domains="+url+"&search_context="+url+"&limit="+limit, function(error, data) {
+d3.json("https://api.us.socrata.com/api/catalog/v1?domains="+url+"&search_context="+url+"&limit="+limit, function(error, data) {
     if (error) return console.error(error);
     console.log("Fetched "+limit+" of "+data.resultSetSize);
     var newdata = []
